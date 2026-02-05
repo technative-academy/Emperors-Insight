@@ -76,7 +76,7 @@ class Ask {
       }
 
       const json = await response.json();
-      this.processResults(json);
+      this.processResults(json.results);
     } catch (error) {
       console.error(error.message);
       this.loading.classList.remove("is-loading");
