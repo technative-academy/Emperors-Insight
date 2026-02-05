@@ -6,9 +6,12 @@
 
 .button {
   padding: var(--spacing-s) var(--spacing-m);
-  border-radius: var(--border-radius-s);
+  border-radius: 2px;
   cursor: pointer;
   transition: all 0.25s;
+  font-family: var(--font-family-body);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .button:disabled {
@@ -18,21 +21,23 @@
 
 .button--primary {
   border: 1px solid var(--colour-primary);
-  background: var(--colour-primary);
+  background: linear-gradient(180deg, rgba(215, 180, 104, 0.15), rgba(215, 180, 104, 0.05));
   color: var(--colour-text-light);
+  box-shadow: 0 0 10px var(--colour-glow);
 }
 
 .button--primary:hover {
-  background: var(--colour-background-white);
+  background: var(--colour-background-light);
   color: var(--colour-primary);
 }
 
 .button--secondary {
   background: transparent;
-  border: 1px solid var(--colour-background-light);
-  color: var(--colour-primary);
+  border: 1px solid var(--colour-line);
+  color: var(--colour-text-dark);
 }
 
 .button--secondary:hover {
   border-color: var(--colour-primary);
+  color: var(--colour-primary);
 }

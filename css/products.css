@@ -2,7 +2,7 @@
   display: none;
   text-align: left;
   padding: var(--spacing-l);
-  border-top: 2px solid var(--colour-background-light);
+  border-top: 2px solid var(--colour-line);
 }
 
 .products.is-shown {
@@ -18,11 +18,12 @@
 }
 
 .products__item {
-  background: var(--colour-background-white);
-  color: var(--colour-text-dark);
+  background: var(--colour-background-light);
+  color: var(--colour-text-light);
   padding: var(--spacing-l);
-  border: 1px solid var(--colour-background-light);
-  border-radius: var(--border-radius-l);
+  border: 1px solid var(--colour-line);
+  border-radius: var(--border-radius-s);
+  box-shadow: inset 0 0 14px rgba(0, 0, 0, 0.25);
 }
 
 @media (min-width: 800px) {

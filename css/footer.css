@@ -7,7 +7,10 @@
   margin-right: auto;
   max-width: var(--width-max);
   padding: var(--spacing-l);
+  border-top: 1px solid var(--colour-line);
+  color: var(--colour-text-dark);
 }
 .footer__link {
   text-decoration: none;
+  color: var(--colour-text-light);
 }

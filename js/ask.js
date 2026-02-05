@@ -70,15 +70,12 @@ class Ask {
     const url = `https://ai-project.technative.dev.f90.co.uk/ai/warhammer/?${new URLSearchParams({ query: this.askInput.value })}`;
 
     try {
-      console.log("Prefetch");
       const response = await fetch(url);
-      console.log("Afterfetch");
       if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
       }
 
       const json = await response.json();
-      console.log(json);
       this.processResults(json.results);
     } catch (error) {
       console.error(error.message);
@@ -92,7 +89,6 @@ class Ask {
     } else {
       this.resultsContainer.classList.remove("is-shown");
     }
-    console.log(data);
     data.forEach((result) => {
       const resultsItem = document.createElement("div");
       resultsItem.classList.add("results__item");

@@ -1,12 +1,14 @@
 /* Variables */
 :root {
-  --colour-primary: #6200ea;
-  --colour-secondary: #ff0080;
-  --colour-background-white: white;
-  --colour-background-light: #f0f0f0;
-  --colour-background-dark: black;
-  --colour-text-light: white;
-  --colour-text-dark: black;
+  --colour-primary: #d7b468;
+  --colour-secondary: #b84b3b;
+  --colour-background-white: #121914;
+  --colour-background-light: #18231b;
+  --colour-background-dark: #070c09;
+  --colour-text-light: #e6f4d5;
+  --colour-text-dark: #b6d9a6;
+  --colour-line: #2a3a2d;
+  --colour-glow: rgba(214, 180, 104, 0.35);
 
   --width-max: 800px;
 
@@ -22,13 +24,13 @@
   --font-size-body: 16px;
   --font-size-small: 12px;
   --font-weight-bold: bold;
-  --font-family-body: Arial, sans-serif;
+  --font-family-body: Consolas, "Lucida Console", "Courier New", monospace;
 
   --border-radius-s: 5px;
   --border-radius-m: 10px;
   --border-radius-l: 20px;
 
-  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 6px 18px rgba(0, 0, 0, 0.35);
 }
 
 *,
@@ -43,4 +45,52 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+  color: var(--colour-text-light);
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(215, 180, 104, 0.08), transparent 60%),
+    radial-gradient(800px 800px at 100% 0%, rgba(184, 75, 59, 0.08), transparent 55%),
+    linear-gradient(180deg, #0a100c 0%, #070c09 60%, #050806 100%);
+  letter-spacing: 0.4px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.03),
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px,
+      transparent 3px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 1px,
+      transparent 4px
+    );
+  mix-blend-mode: soft-light;
+  opacity: 0.5;
+  z-index: 0;
+}
+
+main,
+header,
+footer,
+section,
+div {
+  position: relative;
+  z-index: 1;
+}
+
+a {
+  color: var(--colour-primary);
+}
+
+a:hover {
+  color: var(--colour-text-light);
 }

@@ -5,6 +5,7 @@
   margin-right: auto;
   margin-top: calc(-1 * var(--spacing-xl));
   background: var(--colour-background-white);
-  border-radius: var(--border-radius-l);
+  border-radius: var(--border-radius-m);
   box-shadow: var(--box-shadow);
+  border: 1px solid var(--colour-line);
 }
