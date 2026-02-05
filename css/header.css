@@ -20,6 +20,24 @@
   padding: var(--spacing-l);
 }
 
+.header__logo img,
+.header__logo svg {
+  display: block;
+  width: 140px;
+  height: auto;
+}
+
+.header__logo img {
+  filter: brightness(0) saturate(100%) invert(86%) sepia(18%) saturate(430%)
+      hue-rotate(6deg) brightness(96%) contrast(92%)
+    drop-shadow(0 0 10px var(--colour-glow));
+}
+
+.header__logo svg {
+  fill: var(--colour-primary);
+  filter: drop-shadow(0 0 10px var(--colour-glow));
+}
+
 @media (min-width: 800px) {
   .header__content {
     flex-direction: row;
